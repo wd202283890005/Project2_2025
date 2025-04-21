@@ -1,4 +1,13 @@
 #!/usr/bin/env python3
+
+#Use Comments
+#Program Title: Moniter soil humidity
+#Program Description: Send an email every three hours to report the condition of the soil and whether watering is required
+#Name: Di Wu
+#Student ID: 202283890005    20110009
+#Course and year: ProjectSmester 2025
+#Date: 21/4/25
+
 import RPi.GPIO as GPIO
 import smtplib
 import time

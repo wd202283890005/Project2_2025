@@ -6,7 +6,7 @@ from email.message import EmailMessage
 
 # ===== Sensor Configuration =====
 SENSOR_PIN = 4         # GPIO4 (BCM numbering)
-CHECK_INTERVAL = 0.006     # Check interval (hours)
+CHECK_INTERVAL = 3     # Check interval (hours)
 status_map = {
     1: ("Water needed!", "[Alert] Plant needs water"),
     0: ("Moisture sufficient", "[OK] Plant status normal")
@@ -59,7 +59,7 @@ if __name__ == "__main__":
             email_body = f"""\
 Detection time: {time.strftime('%Y-%m-%d %H:%M')}
 Current status: {message}
-Sensor reading: {'Wet' if current_status else 'Dry'}"""
+Sensor reading: {'Dry' if current_status else 'Wet'}"""
             
             # Send status report
             send_email(subject, email_body)
